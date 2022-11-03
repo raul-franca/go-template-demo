@@ -1,9 +1,0 @@
-{{ template "header.html" }}
-
-  <table>
-    <tr><th>Nome</th><th>e-mail</th></tr>
-      {{ range . }}
-    <tr><td>{{ .Name  }}</td><td>{{ .Email }}</td></tr>
-      {{ end }}
-  </table>
-{{ template "footer.html" }}

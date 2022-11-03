@@ -1,4 +1,4 @@
-module go-crud
+module github.com/raul-franca/go-template-demo
 
 go 1.19
 
