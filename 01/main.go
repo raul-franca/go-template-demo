@@ -50,9 +50,9 @@ func main() {
 		contato2,
 	)
 	templates := []string{ // Arquivos que vão compor o template
-		"templates/header.html",
-		"templates/content.html",
-		"templates/footer.html",
+		"01/templates/header.html",
+		"01/templates/content.html",
+		"01/templates/footer.html",
 	}
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
