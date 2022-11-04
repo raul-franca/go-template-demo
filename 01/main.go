@@ -1,7 +1,6 @@
 package main
 
 import (
-	"github.com/google/uuid"
 	"html/template"
 	"net/http"
 )
@@ -15,14 +14,15 @@ type Contato struct {
 
 type Contatos []Contato
 
-func NewContato(name, email string) *Contato {
-	return &Contato{
-		ID:    uuid.New().String(),
-		Name:  name,
-		Email: email,
-		Ativo: true,
-	}
-}
+//
+//func NewContato(name, email string) *Contato {
+//	return &Contato{
+//		ID:    uuid.New().String(),
+//		Name:  name,
+//		Email: email,
+//		Ativo: true,
+//	}
+//}
 
 func (contato Contato) GetContato() string {
 	return "#-> Contato id: " + contato.ID + " " +
@@ -56,7 +56,6 @@ func main() {
 	}
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		//w.Write([]byte("testando listenAndServer"))
 
 		t := template.New("content.html")
 		t, err := t.ParseFiles(templates...)

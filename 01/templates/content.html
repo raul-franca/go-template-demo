@@ -1,6 +1,7 @@
 {{ template "header.html" }}
 
   <table>
+    <tr><th colspan="2">Todos os contatos</th> </tr>
     <tr><th>Nome</th><th>e-mail</th></tr>
       {{ range . }}
     <tr><td>{{ .Name  }}</td><td>{{ .Email }}</td></tr>
